@@ -1,13 +1,9 @@
 const mysql = require("mysql2");
-const root = process.env.MYSQL_HOST;
-const user = process.env.MYSQL_USER;
-const password = process.env.MYSQL_PASSWORD;
-const database = process.env.MYSQL_DATABASE;
 const connection = mysql.createConnection({
-  host: root,
-  user: user,
-  password: password,
-  database: database,
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "tlm_db",
 });
 
 connection.connect((error) => {
